@@ -37,8 +37,8 @@ def get_birthday():
 def get_birthday2():
   next2 = datetime.strptime(str(date.today().year) + "-" + birthday2, "%Y-%m-%d")
   if next2 < datetime.now():
-    next2 = next2.replace(year=next.year + 1)
-  return (next - today).days
+    next2 = next2.replace(year=next2.year + 1)
+  return (next2 - today).days
 
 def get_words():
   words = requests.get("https://api.shadiao.pro/chp")
